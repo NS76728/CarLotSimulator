@@ -4,6 +4,7 @@ namespace CarLotSimulator
 {
     class Program
     {
+
         static void Main(string[] args)
         {
             //TODO
@@ -13,16 +14,45 @@ namespace CarLotSimulator
             //Car shall have the following methods: MakeEngineNoise(), MakeHonkNoise()
             //The methods should take one string parameter: the respective noise property
 
-
             //Now that the Car class is created we can instanciate 3 new cars
             //Set the properties for each of the cars
             //Call each of the methods for each car
+            Car car1 = new Car();
+            Car car2 = new Car();
+            Car car3 = new Car();
+            string engineNoise = "vroom";
+            car1.honkNoise = "honk honk";
+            car1.MakeEngineNoise(engineNoise);
+            car1.MakeHonkNoise();
+            Console.WriteLine("-----------------");
+            engineNoise = "vroom vroom";
+            car2.honkNoise = "honk honk honk";
+            car2.MakeEngineNoise(engineNoise);
+            car2.MakeHonkNoise();
+            Console.WriteLine("-----------------");
+             engineNoise = "vroooooommmss";
+            car3.honkNoise = "beep beeep";
+            car3.MakeEngineNoise(engineNoise);
+            car3.MakeHonkNoise();
+            Console.WriteLine("-----------------");
+            Console.WriteLine("-----------------");
 
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
 
             //*************BONUS X 2*************//
+
+            CarLot lot1 = new CarLot();
+
+            lot1.addTo(car1);
+            lot1.addTo(car2);
+            lot1.addTo(car3);
+
+            lot1.printList();
+
+
+
 
             //Create a CarLot class
             //It should have at least one property: a List of cars
