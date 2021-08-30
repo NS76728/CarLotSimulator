@@ -15,10 +15,15 @@ namespace CarLotSimulator
 
         public void printList()
         {
-            for (int x=0; x<lotList.Count; x++)
+           
+            foreach (var Car in lotList)
             {
-                Console.WriteLine(lotList[x]);
+                Console.WriteLine(Car.EngineNoise);
+                Console.WriteLine(Car.HonkNoise);
             }
+
+
+
         }
         
 
