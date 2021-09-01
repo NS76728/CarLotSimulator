@@ -22,6 +22,7 @@ namespace CarLotSimulator
            
             foreach (var Car in lotList)
             {
+                Console.WriteLine("Number of cars in the lot: " + numberOfCars);
                 Console.WriteLine(Car.EngineNoise);
                 Console.WriteLine(Car.HonkNoise);
                 Console.WriteLine(Car.Year);
